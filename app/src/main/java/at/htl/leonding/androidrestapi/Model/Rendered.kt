@@ -1,4 +1,4 @@
 package at.htl.leonding.androidrestapi.Model
 
-class Rendered(val content: String) {
+data class Rendered(val content: String) {
 }
