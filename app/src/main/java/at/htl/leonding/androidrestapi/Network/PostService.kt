@@ -7,7 +7,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 
-private const val BASE_URL = "https://www.htl-leonding.at/?rest_route=/wp/v2/posts"
+private const val BASE_URL = "https://www.htl-leonding.at/"
 
 private val moshi = Moshi.Builder()
     .add(KotlinJsonAdapterFactory())
@@ -19,7 +19,7 @@ private val retrofit = Retrofit.Builder()
 
 
 interface PostService {
-    @GET("")
+    @GET("wp-json/?rest_route=/wp/v2/posts")
     suspend fun getPosts(): List<Post>
 }
 
