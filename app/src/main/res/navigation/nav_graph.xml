@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/postOverviewFragment">
+
+    <fragment
+        android:id="@+id/postOverviewFragment"
+        android:name="at.htl.leonding.androidrestapi.PostOverviewFragment"
+        android:label="fragment_post_overview"
+        tools:layout="@layout/fragment_post_overview" >
+        <action
+            android:id="@+id/action_postOverviewFragment_to_postDetailFragment"
+            app:destination="@id/postDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/postDetailFragment"
+        android:name="at.htl.leonding.androidrestapi.PostDetailFragment"
+        android:label="fragment_post_detail"
+        tools:layout="@layout/fragment_post_detail" />
+</navigation>
