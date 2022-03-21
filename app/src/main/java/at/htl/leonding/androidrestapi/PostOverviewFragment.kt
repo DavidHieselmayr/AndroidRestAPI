@@ -37,7 +37,7 @@ class PostOverviewFragment : Fragment() {
     ): View? {
         binding = FragmentPostOverviewBinding.inflate(inflater)
         binding.lifecycleOwner = this
-        binding.postsRV.adapter = PostsAdapter()
+        binding.postsRV.adapter = PostsAdapter(postViewModel)
         binding.viewModel = postViewModel
         // Inflate the layout for this fragment
         return binding.root

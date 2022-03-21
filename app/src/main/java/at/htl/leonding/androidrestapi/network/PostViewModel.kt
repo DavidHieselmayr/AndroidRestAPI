@@ -12,7 +12,7 @@ enum class PostAPIStatus { LOADING, DONE, ERROR }
 
 class PostViewModel : ViewModel() {
 
-
+    var currentPost : Post ?= null
     private val _status = MutableLiveData<PostAPIStatus>()
 
     val status: LiveData<PostAPIStatus>
